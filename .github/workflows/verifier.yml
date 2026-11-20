@@ -1,0 +1,31 @@
+# Copies des archives du copilote et surveillance de leurs sources : chaque nuit, et à la demande (verifier.js).
+# Dépôt public : minutes d'Actions gratuites ; d'ordinaire quelques requêtes d'en-têtes seulement.
+name: verifier
+on:
+  schedule:
+    - cron: "17 2 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write    # publication « copilote » : ajout des copies
+  actions: write     # garder la vérification nocturne active (GitHub coupe les tâches planifiées après 60 jours sans activité)
+concurrency:
+  group: verifier
+  cancel-in-progress: false
+jobs:
+  verifier:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Sources et copies
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node verifier.js manifeste.json
+      - name: Garder la vérification nocturne active
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/verifier.yml/enable" || true

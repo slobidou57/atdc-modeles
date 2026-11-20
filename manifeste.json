@@ -1,0 +1,26 @@
+{
+  "note": "Archives du copilote à empreinte fixée (atdc-desktop/src/copilote.js) : copie gardée ici (publication « copilote ») et source surveillée chaque nuit. À changer EN MÊME TEMPS que copilote.js (l'essai t1126 compare les deux).",
+  "publication": "copilote",
+  "archives": [
+    { "nom": "sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8.tar.bz2", "source": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8.tar.bz2", "octets": 487211443,
+      "sha256": ["1495e91b59d7fc53ddca91f3431758ec99f8fa253fdb0e1e851be0f72b14b0f9", "5793d0fd397c5778d2cf2126994d58e9d56b1be7c04d13c7a15bb1b4eafb16bf"], "licence": "CC-BY-4.0 (NVIDIA parakeet-tdt-0.6b-v3, export sherpa-onnx)" },
+    { "nom": "sherpa-onnx-nemo-canary-180m-flash-en-es-de-fr-int8.tar.bz2", "source": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-nemo-canary-180m-flash-en-es-de-fr-int8.tar.bz2", "octets": 153692328,
+      "sha256": ["7a38ed8b13f014ad632b09ff8d22e0c6f1359dd046af9235d281dfae841b9ab9"], "licence": "CC-BY-4.0 (NVIDIA canary-180m-flash, export sherpa-onnx)" },
+    { "nom": "sherpa-onnx-cohere-transcribe-14-lang-int8-2026-04-01.tar.bz2", "source": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-cohere-transcribe-14-lang-int8-2026-04-01.tar.bz2", "octets": 1699791751,
+      "sha256": ["bd582588d50685a795dcd2807ab77e11361b8312d96c53884682def45ab4206d"], "licence": "Apache-2.0 (Cohere Transcribe 03-2026, export sherpa-onnx) — à confirmer avant la copie", "copie": false },
+    { "nom": "sherpa-onnx-whisper-turbo.tar.bz2", "source": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-whisper-turbo.tar.bz2", "octets": 563790207,
+      "sha256": ["b11acbbcd660b44a8e0df33724feb5aaa709cf65668f2823d59f656312544f22"], "licence": "MIT (OpenAI Whisper large-v3 turbo, export sherpa-onnx)" },
+    { "nom": "llama-b11399-bin-win-cpu-x64.zip", "source": "https://github.com/ggml-org/llama.cpp/releases/download/b11399/llama-b11399-bin-win-cpu-x64.zip", "octets": 19386488,
+      "sha256": ["ef5afeab664baca771849c9a8821617aec8d18eac744aaee0d04f6cf96434d9a"], "licence": "MIT (llama.cpp)" },
+    { "nom": "llama-b11399-bin-win-vulkan-x64.zip", "source": "https://github.com/ggml-org/llama.cpp/releases/download/b11399/llama-b11399-bin-win-vulkan-x64.zip", "octets": 33304663,
+      "sha256": ["62a1b11c5dcd50c61c98c9f2e2aaa494d08cbd11408adac53d18b5eb20e58a2e"], "licence": "MIT (llama.cpp)" },
+    { "nom": "whisper-bin-x64.zip", "source": "https://github.com/ggml-org/whisper.cpp/releases/download/b5130/whisper-bin-x64.zip", "octets": 8573270,
+      "sha256": ["f9ec6c52a2e949b62ab51fa21d0d497958f9e41c3010c157c4e42932d5316f3c"], "licence": "MIT (whisper.cpp)" }
+  ],
+  "surveiller": [
+    { "nom": "voix Supertonic 3", "source": "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/sherpa-onnx-supertonic-3-tts-int8-2026-05-11.tar.bz2" },
+    { "nom": "modèle de sens EmbeddingGemma 300M", "source": "https://huggingface.co/ggml-org/embeddinggemma-300M-GGUF/resolve/main/embeddinggemma-300M-Q8_0.gguf" },
+    { "nom": "écoute du prénom (whisper.cpp base)", "source": "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin" },
+    { "nom": "Vosk français", "source": "https://alphacephei.com/vosk/models/vosk-model-small-fr-0.22.zip" }
+  ]
+}
